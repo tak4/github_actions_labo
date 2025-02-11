@@ -16,4 +16,4 @@ jobs:
     - name: Install Asciidoctor-pdf
       run: sudo gem install asciidoctor-pdf
     - name: asciidoctor-pdf
-      run: asciidoctor-pdf -o sample_asciidoc/main.adoc
+      run: asciidoctor-pdf sample_asciidoc/main.adoc
