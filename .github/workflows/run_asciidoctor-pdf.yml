@@ -1,0 +1,19 @@
+name: Run Asciidoctor-pdf
+on:
+  push:
+    paths:
+    - sample_asciidoc/*.adoc
+    branches: ['**']
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Install Asciidoctor
+      run: sudo gem install asciidoctor
+    - name: Install Asciidoctor-pdf
+      run: sudo gem install asciidoctor-pdf
+    - name: asciidoctor-pdf
+      run: asciidoctor-pdf -o sample_asciidoc/main.adoc
