@@ -10,3 +10,5 @@ test3-1 +
 test3-2 +
 test4-main +
 test5-feature +
+test6-main
+test6-feature +
